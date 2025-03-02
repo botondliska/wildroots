@@ -6,7 +6,7 @@ public class WildRootsGUI {
     private GameEngine gameArea;
 
     public WildRootsGUI() {
-        frame = new JFrame("YogiBear");
+        frame = new JFrame("WildRoots");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
