@@ -4,7 +4,7 @@ import java.awt.*;
 public class GameEngine extends JPanel{
 
     private final Image background = new ImageIcon(getClass().getResource("resources/background.png")).getImage();
-    //jo
+
     public GameEngine() {
         super();
         setFocusable(true);
