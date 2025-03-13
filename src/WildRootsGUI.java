@@ -15,15 +15,16 @@ public class WildRootsGUI {
 
         gameArea = new GameEngine();
         frame.getContentPane().add(gameArea);
+        frame.getContentPane().setBackground(new Color(0,0,0,0));
         createMenu();
         frame.setVisible(true);
     }
 
     private void createMenu() {
         menuPanel = new JPanel();
-        menuPanel.setLayout(new GridLayout(3, 1, 10, 10)); // Középre rendezett gombok
+        menuPanel.setLayout(new BoxLayout(menuPanel,BoxLayout.Y_AXIS));
+        menuPanel.setBackground(new Color(0,0,0,0));
         menuPanel.setOpaque(false);
-
         JButton newGameButton = createImageButton("resources/start_game.png");
         JButton settingsButton = createImageButton("resources/settings.png");
         //JButton exitButton = createImageButton("resources/exit.png");
@@ -37,8 +38,11 @@ public class WildRootsGUI {
         menuPanel.add(settingsButton);
         //menuPanel.add(exitButton);
 
+
         frame.getContentPane().add(menuPanel, BorderLayout.SOUTH); // Gombokat a képernyő aljára helyezzük
     }
+
+
 
     private JButton createImageButton(String imagePath) {
         ImageIcon icon = new ImageIcon(getClass().getResource(imagePath));
@@ -52,6 +56,7 @@ public class WildRootsGUI {
         button.setContentAreaFilled(false);
         button.setFocusPainted(false);
         button.setOpaque(false);
+        button.setAlignmentX(Component.CENTER_ALIGNMENT);
         button.setBackground(new Color(0, 0, 0, 0));
 
         return button;
